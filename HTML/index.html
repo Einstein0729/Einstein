@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Einstein</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io (6)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io (6)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io (6)/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="../CSS/main.css">
+
+</head>
+<body>
+        <!-- Nav Bar -->
+        <nav style="background-color: #ebf2ff;" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div>
+           <a href="index.html"><h1 href="index.html"class="title" style="color: #5ed674;">Einstein</h1></a>
+        </div>
+       <a href="index.html"><!--<img id="imgLogo" src="../IMG/shining-light-bulb-with-human-brain-big-idea-innovation-concept-hd-graphic-animation-motion-background-storyblocks-video-animated-light-bulb-png-1920_1080.png" alt="Logo Image"></a>-->
+
+        <a class="navbar-brand" href="#">Sign In</a>
+        <div class="dropdown-menu signInForm">
+                <form class="px-4 py-3">
+                  <div class="form-group">
+                    <label style="font-size: 25px;" for="exampleDropdownFormEmail1">Email address</label>
+                    <input style="font-size:25px;" type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Password</label>
+                    <input style="font-size: 25px;" type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a id="signUpButton" class="dropdown-item" href="#">Sign up</a>
+                <a class="dropdown-item" href="#">Forgot password?</a>
+              </div>   
+              
+              <form class="dropdown-menu p-4 signUpForm">
+                    <div class="form-group">
+                      <label for="exampleDropdownFormEmail2">Email address</label>
+                      <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleDropdownFormPassword2">Password</label>
+                      <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                        <label class="form-check-label" for="dropdownCheck2">
+                          Remember me
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </form>
+        </nav>
+
+    <div class="input-group mb-3">
+      <form id="searchForm">
+          <input type="text" id="query" class="form-control" placeholder="Field of Study" aria-label="Example text with two button addons" aria-describedby="button-addon3">
+          <select style="background-color: #ebf2ff; color: #5ed674;" class="custom-lg" id="inputGroupSelect04" aria-label="Example select with button addon">
+        </form>
+            <option selected disabled value="0">Level:</option>
+            <option value="1">Beginner</option>
+            <option value="2">Intermediate</option>
+            <option value="3">Advanced</option>
+        </select>
+        <button id="submit" class="btn-search" type="button">Search</button>
+        <ul id="results"></ul>
+        <div id="buttons"></div>
+    </div>
+
+    <div class="footer">
+            <button type="button" class="btn-contact" data-toggle="modal" data-target="#exampleModal" data-whatever="Contact">Contact</button>
+            <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="false" aria-hidden="false">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-group">
+                              <label for="recipient-name" class="col-form-label">Recipient:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label">Message:</label>
+                              <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="contactCloseBtn" data-dismiss="modal">Close</button>
+                          <button type="button" class="contactSubmitBtn">Send message</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Button Trigger -->
+                  <button type="button" class="btn-about" data-toggle="modal" data-target="#exampleModalCenter">
+                      About
+                  </button>
+                  <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="false">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">About</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            This is where we talk about how awesome our website is and how we got our start and big break!
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn-close" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        <a class="footerText" href="#" id="help">Help</a>
+    </div>
+    
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="helpForm" style="display: none;">
+        <h1>Help</h1>
+        <p>If you need any help this is how you can get it</p>
+        <button id="helpButton">Close</button>
+    </div>
+
+        <!-- JQuery, Popper.JS, Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Link to JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    
+    <!-- Link to JS -->
+    <script src="../JS/scripts.js"></script>
+</body>
+</html>
